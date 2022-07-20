@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
 
     <h1>Hello from ecommerce</h1>
     <div>
@@ -111,4 +111,4 @@ body {
 .btn:hover {
     opacity: 1;
 }
-</style> -->
+</style>
