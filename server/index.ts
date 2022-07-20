@@ -10,9 +10,11 @@ app.use(cors());
 app.use(json());
 const Port= 2000 
 
+
+//user
 import { userRouter } from "./Router/user";
 app.use(userRouter);
-
+//piano
 import {pianoRouter} from "./Router/piano";
 app.use(pianoRouter)
 
@@ -20,6 +22,20 @@ app.use(pianoRouter)
 import { ConservatoryRouter } from "./Router/conservatoryRouter";
 
 app.use(ConservatoryRouter);
+//beginner
+import { beginnerRouter } from "./Router/beginner";
+
+app.use(beginnerRouter);
+//intermediate
+import { intermediateRouter } from "./Router/intermediate";
+
+app.use(intermediateRouter);
+//expert
+import { expertRouter } from "./Router/expert";
+
+app.use(expertRouter);
+
+
 
 
 
