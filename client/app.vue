@@ -1,5 +1,8 @@
 <template>
   <div>
+        <div>
+<NavBar/>
+    </div>
     <h1>Samphony</h1>
     <!-- <NuxtWelcome /> -->
     <div class="nav">
@@ -12,7 +15,14 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import { NavBar } from "~~/.nuxt/components";
+export default {
+    name : "NavBar",
+    components :{
+        NavBar
+    }
+}</script>
 <style>
 h1{
   color: yellowgreen;
