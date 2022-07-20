@@ -13,6 +13,8 @@ const Port= 2000
 import { userRouter } from "./Router/user";
 app.use(userRouter);
 
+import {pianoRouter} from "./Router/piano";
+app.use(pianoRouter)
 
 //conservatory
 import { ConservatoryRouter } from "./Router/conservatoryRouter";

@@ -1,9 +1,17 @@
 <template>
-  <div>
+ 
+        <div>
+<NavBar/>
+ 
   </div>
 </template>
 
-<script></script>
-<style>
-
-</style>
+<script>
+import { NavBar } from "~~/.nuxt/components";
+export default {
+    name : "NavBar",
+    components :{
+        NavBar
+    }
+}
+</script>
