@@ -1,42 +1,48 @@
 <template>
 
-<form action="/action_page.php" style="max-width:500px;margin:auto">
+<form style="max-width:500px;margin:auto">
   <h2>Sign Up here to Create your account </h2>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" v-model="user.username" placeholder="Username" name="usrnm">
+    <input class="input-field" type="text" v-model="user.username" placeholder="Username" required name="usrnm"/>
   </div>
 
   <div class="input-container">
     <i class="fa fa-envelope icon"></i>
-    <input class="input-field" type="text" v-model="user.email" placeholder="Email" name="email">
+    <input class="input-field" type="text" v-model="user.email" placeholder="Email" required name="email"/>
   </div>
   
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" v-model="user.password" placeholder="Password" name="psw">
+    <input class="input-field" type="password" v-model="user.password" placeholder="Password" required name="psw"/>
   </div>
 
-  <button v-on:click="saveUser" class="btn">Register</button>
-</form>
+    <div class="input-container">
+      <i class="fa fa-key icon"></i>
+      <input class="input-field" type="password" v-model="user.password" placeholder="Password" name="psw" />
+    </div>
+
+    <button v-on:click="saveUser" class="btn">Register</button>
+  </form>
 
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import DataService from "~/service/DataService";
+import DataService from "../service/DataService";
 import User from '../interface/User';
 import ResponseData from '../interface/ResponseData';
 
 export default defineComponent ({
+  name: "signup",
   data() {
     return {
       user: {
         id: null,
-        email:"",
-        username:"",
-        password:""
-      }as User,
+        email: "",
+        username: "",
+        password: ""
+      } as User,
     };
   },
   methods: {
@@ -47,26 +53,31 @@ export default defineComponent ({
         email: this.user.email,
         password: this.user.password,
       }
-      DataService.create(data).then((res: ResponseData)=>{
-        this.user.id=res.data.id;
+      DataService.create(data).then((res: ResponseData) => {
+        this.user.id = res.data.id;
         console.log(res.data)
       })
-      .catch((err: Error)=> {
-        console.log(err)
-      })
+        .catch((err: Error) => {
+          console.log(err)
+        })
     }
   }
-
 })
 
 </script>
 
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 .input-container {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox;
+  /* IE10 */
   display: flex;
   width: 100%;
   margin-bottom: 15px;
