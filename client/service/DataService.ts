@@ -9,6 +9,12 @@ class DataService {
             res.data
         })
     }
+    addPiano(data:any): Promise<any>{
+        return http.post("/piano",data)
+    }
+    async getPiano(data:any): Promise<any>{
+        return await http.get("/piano",data)
+    }
 }
 
 export default new DataService();
