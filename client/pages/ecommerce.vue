@@ -1,58 +1,40 @@
-<template >
+<template>
     <div>
-        <form>
-            <h2>Add here your Piano you want to sale </h2>
-            <label for="img">Image</label><br />
-            <input class="input-field" type="text" placeholder="enter your image" v-model="form.img" /><br />
-            <label for="img">Brand</label><br />
-            <input class="input-field" type="text" placeholder="brand" v-model="form.brand" /><br />
-            <label for="img">Price</label><br />
-            <input class="input-field" type="number" placeholder="enter your price" v-model="form.price" /><br />
-            <label for="img">Description</label><br />
-            <input class="input-field" type="text" placeholder="enter your description"
-                v-model="form.description" /><br />
-            <button class="btn" v-on:click="savePiano">Add</button>
-        </form>
+
+        <div class="hold">
+            <NuxtLink to="CreatePiano">Create One</NuxtLink>
+            <div class="container" v-for="piano in pianos" :key="piano.id">
+                <div class="pianoContainer">
+                    <img :src="`${piano.img}`" alt="image" />
+                    <div class="brand">
+                        <h3 class="name">{{ piano.brand }}</h3>
+                        <h3 class="price">{{ piano.price }}</h3>
+                        <p class="description">{{ piano.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
 import DataService from "~/service/DataService";
-import ResponseData from '@/interface/ResponseData';
-import Piano from "@/interface/Piano";
+// import axios from 'axios'
 
 export default defineComponent({
     data() {
         return {
-            form: {
-                id: null,
-                img: "",
-                brand: "",
-                price: 0,
-                description: ""
-            } as Piano,
-        };
-    },
-    methods: {
-        savePiano() {
-            let data = {
-                img: this.form.img,
-                brand: this.form.brand,
-                price: this.form.price,
-                description: this.form.description
-            }
-            DataService.addPiano(data)
-                .then((res: ResponseData) => {
-                    this.form.id = res.data.id;
-                    console.log(res.data);
-                })
-                .catch((err) => {
-                    console.log(err);
-
-                })
+            pianos: []
         }
+    },
+
+    created() {
+        DataService.getPiano()
+            .then(response => {
+                this.pianos = response.data
+                console.log(response.data);
+            })
     }
 })
-
 </script>
