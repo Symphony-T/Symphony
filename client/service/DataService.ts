@@ -33,6 +33,12 @@ class DataService {
     async getSheetMas(data:any): Promise<any>{
         return await http.get("/expert",data)
     }
+    addSheeth(data:any): Promise<any>{
+        return http.post("/home",data)
+    }
+    async getSheeth(data:any): Promise<any>{
+        return await http.get("/home",data)
+    }
     
 }
 
