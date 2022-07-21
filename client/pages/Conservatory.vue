@@ -22,6 +22,7 @@
 
   <button v-on:click="saveCons" class="btn">Post new one</button>
 </form>  
+<NuxtLink to="allcons" class="button">See all Conservatorys</NuxtLink>
 </div>
   </template>
 
@@ -77,6 +78,28 @@ h1{
 h2{
   text-align: center;
 }
+.button{
+
+                display: inline-block;
+                outline: 0;
+                cursor: pointer;
+                border: 2px solid #000;
+                border-radius: 3px;
+                color: #000;
+                background: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 28px;
+                padding: 12px 20px;
+                text-align:center;
+                transition-duration: .15s;
+                transition-property: all;
+                transition-timing-function: cubic-bezier(.4,0,.2,1);   
+                text-decoration: none;      
+}
+ .button:hover{
+                    background: rgb(251, 193, 245);
+                }
 </style>
 
 
