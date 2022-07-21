@@ -1,20 +1,20 @@
 <template>
 
-<form action="/action_page.php" style="max-width:500px;margin:auto">
+<form style="max-width:500px;margin:auto">
   <h2>Sign Up here to Create your account </h2>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" v-model="user.username" placeholder="Username" name="usrnm">
+    <input class="input-field" type="text" v-model="user.username" placeholder="Username" required name="usrnm">
   </div>
 
   <div class="input-container">
     <i class="fa fa-envelope icon"></i>
-    <input class="input-field" type="text" v-model="user.email" placeholder="Email" name="email">
+    <input class="input-field" type="text" v-model="user.email" placeholder="Email" required name="email">
   </div>
   
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" v-model="user.password" placeholder="Password" name="psw">
+    <input class="input-field" type="password" v-model="user.password" placeholder="Password" required name="psw">
   </div>
 
   <button v-on:click="saveUser" class="btn">Register</button>
@@ -29,6 +29,7 @@ import User from '../interface/User';
 import ResponseData from '../interface/ResponseData';
 
 export default defineComponent ({
+  name: "signup",
   data() {
     return {
       user: {
@@ -56,7 +57,6 @@ export default defineComponent ({
       })
     }
   }
-
 })
 
 </script>
