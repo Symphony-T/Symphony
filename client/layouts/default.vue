@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <NavbarVue />
     <Nuxt />
   </div>
 </template>
@@ -10,7 +10,7 @@ import NavbarVue from '~/components/Navbar.vue'
 export default {
   name: 'default',
     components :{
-        NavbarVue
+       NavbarVue
     },
   
 }

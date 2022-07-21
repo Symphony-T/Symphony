@@ -16,10 +16,6 @@ export default {
   .page-holder {
     min-height: 100vh;
   }
-  .bg-cover{
-    /* background-size: cover !important; */
-    
-  }
   #background-div {
     background: url("https://images.alphacoders.com/120/thumb-1920-1203812.png");
   }
