@@ -3,12 +3,12 @@
 <h1>Conservatory</h1>
   <form  style="max-width:500px;margin:auto">
   <h2>Create a new one</h2>
-  <div class="input-container">>
+  <div class="input-container">
     <input class="input-field" type="text" v-model="name" placeholder="Name" name="name">
   </div>
     <input class="input-field" type="text" v-model="description" placeholder="Description" name="description">  
-  <div class="input-container">
-    <input class="input-field" type="text" v-model="img" placeholder="Img" name="img">
+  <div class="input-container"><br> 
+   <input class="input-field" type="text" v-model="img" placeholder="Img" name="img">
   </div>
   <div class="input-container">
     <input class="input-field" type="text" v-model="localisation" placeholder="Localisation" name="localisation">
@@ -63,9 +63,10 @@ export default defineComponent ({
         console.log(err)
       })
     }
-  }
-
+  },
+  name:"conservatory"
 })
+
 
 </script>
 <style>
@@ -73,3 +74,5 @@ h1{
     text-align: center;
 }
 </style>
+
+
