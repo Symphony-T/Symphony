@@ -1,5 +1,9 @@
 <template>
 <div>
+  <div>
+    <Navbar />
+  </div>
+
 <h1>Conservatory</h1>
   <form  style="max-width:500px;margin:auto">
   <h2>Create a new one</h2>
@@ -31,10 +35,12 @@ import { defineComponent } from "vue";
 import ConsService from "~/service/ConsService";
 import Conservatory from '../interface/Cons';
 import ResponseData from '../interface/ResponseData';
+import Navbar from "./navbar.vue";
 
 
 
 export default defineComponent ({
+  components: { Navbar },
   data() {
     return {
       conservatory: {

@@ -1,5 +1,9 @@
 <template>
     <div>
+      <div>
+        <Navbar />
+      </div>
+
         <h1>hello beginner</h1>
          <ul class="level">
         <div class="link">
@@ -12,7 +16,9 @@
           <img :src="`${sheet.img}`" alt="image" class="card" />
           <div class="brand">
             <h3 class="name">{{sheet.name }}</h3>
-            
+             <button  >Like</button>
+             <router-link to="/videobeginner"><button>Watch</button></router-link>
+            <button  v-on:click="download(sheet.pdf)">Download</button>
           </div>
         </div>
       </div>
@@ -27,9 +33,11 @@
 <script>
 import { defineComponent } from "vue";
 import DataService from "~/service/DataService";
+import Navbar from "./navbar.vue"
 // import axios from 'axios'
 
 export default defineComponent({
+      components: { Navbar },
   data() {
     return {
       sheets: [],
@@ -43,6 +51,7 @@ export default defineComponent({
     });
   },
 });
+  
 </script>
 <style>
 

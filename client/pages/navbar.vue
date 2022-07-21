@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-  name:'navbar'
+    name: 'navbar'
 }
 </script>
 <style >

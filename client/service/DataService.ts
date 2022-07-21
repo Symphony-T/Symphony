@@ -33,5 +33,24 @@ class DataService {
 async forgetPassword(data:any):Promise<any>{
     return await http.post("/forgetpassword",data)
 }
+    addSheets(data:any): Promise<any>{
+        return http.post("/intermediate",data)
+    }
+    async getSheets(data:any): Promise<any>{
+        return await http.get("/intermediate",data)
+    }
+    addSheetMas(data:any): Promise<any>{
+        return http.post("/expert",data)
+    }
+    async getSheetMas(data:any): Promise<any>{
+        return await http.get("/expert",data)
+    }
+    addSheeth(data:any): Promise<any>{
+        return http.post("/home",data)
+    }
+    async getSheeth(data:any): Promise<any>{
+        return await http.get("/home",data)
+    }
+    
 }
 export default new DataService();

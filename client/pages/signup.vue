@@ -22,7 +22,7 @@
       <input class="input-field" type="password" v-model="user.password" placeholder="Password" name="psw" />
     </div>
 
-    <button v-on:click="saveUser" class="btn">Register</button>
+    <button v-on:click="saveUser" class="btn"><NuxtLink to="navbar">Register</NuxtLink></button>
   </form>
 
 </template>

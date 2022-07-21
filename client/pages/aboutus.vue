@@ -1,5 +1,8 @@
 <template>
 <div> 
+  <div>
+<Navbar /> 
+  </div>
   
     <div class="row">
              <img src="https://images.alphacoders.com/120/thumb-1920-1203812.png" />
@@ -8,8 +11,10 @@
 </template>
 
 <script>
+import Navbar from './navbar.vue';
 export default {
-    name:"aboutus"
+    name: "aboutus",
+    components: { Navbar }
 }
 </script>
 <style>
