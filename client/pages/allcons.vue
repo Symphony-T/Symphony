@@ -2,49 +2,49 @@
     <div>
 
         <div class="hold">
-            <div>
-                <NuxtLink to="createPiano"><button class="btn-1">Add Piano to Sale</button></NuxtLink>
-            </div><br /><br /><br />
-            <div class="container" v-for="piano in pianos" :key="piano.id">
-                <div class="pianoContainer">
-                    <img :src="`${piano.img}`" alt="image" />
-                    <h3 class="name">{{ piano.brand }}</h3>
-                    <h3 class="price">{{ piano.price }} $</h3>
-                    <p class="description">{{ piano.description }}</p>
-                </div>
+            <NuxtLink to="conservatory" class="btn--1">Create One</NuxtLink>
+            <div class="container" v-for="conser in c" :key="conser.id">
+                <div class="CContainer">
+                        <h4>{{conser.name}}</h4>
+                        <p>{{conser.description}}</p>
+                        <img :src="`${conser.img}`" alt="conservatory image">
+                        <h5>{{conser.localisation}}</h5>
+                        <h5>{{conser.price}}</h5>
+                        <h5>{{conser.phoneN}}</h5>
+                    </div>
             </div>
         </div>
-      </div>
-   
+    </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import DataService from "~/service/DataService";
-
+import ConsService from "~/service/ConsService";
+// import axios from 'axios'
 
 export default defineComponent({
-  data() {
-    return {
-      pianos: [],
-    };
-  },
+    data() {
+        return {
+            c: []
+        }
+    },
 
     created() {
-        DataService.getPiano()
+        ConsService.getConservatory()
             .then(response => {
-                this.pianos = response.data
+                this.c = response.data
                 console.log(response.data);
             })
-    },
-    name: "ecommerce"
+    }
 })
 </script>
-
 <style>
-.btn-1 {
+h4{
+    color: rgb(78, 147, 238);
+}
+ .btn--1{
     position: relative;
-     margin-left: 550px;
+    margin:auto;
     width: 600px;
     height: 45px;
     font-size: 18px;
@@ -59,15 +59,13 @@ export default defineComponent({
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-   
-   
+   text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.btn-1:hover {
+.btn--1:hover {
     background-color: orange;
 }
-
 img {
     position: relative;
     width: 400px;
@@ -75,9 +73,7 @@ img {
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
 }
-
-
-.pianoContainer {
+.CContainer {
     position: relative;
     background-color: #f5f5f4;
     width: 400px;
@@ -86,15 +82,6 @@ img {
     padding-bottom: 20px;
     border-radius: 80px;
 }
-
-.pianoContainer h3 {
-    position: relative;
-    margin-top: 0;
-    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    font-family: Lucida Sans;
-    font-size: 30px;
-}
-
 .container {
     position: relative;
     float: left;
@@ -109,6 +96,5 @@ img {
 .container:hover {
     position: relative;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    cursor: pointer;
-}
+    cursor: pointer;}
 </style>

@@ -15,6 +15,18 @@ class DataService {
     async getPiano(data:any): Promise<any>{
         return await http.get("/piano",data)
     }
+    addSheet(data:any): Promise<any>{
+        return http.post("/beginner",data)
+    }
+    async getSheet(data:any): Promise<any>{
+        return await http.get("/beginner",data)
+    }
+    // addSheet(data:any): Promise<any>{
+    //     return http.post("/intermediate",data)
+    // }
+    // async getSheet(data:any): Promise<any>{
+    //     return await http.get("/intermediate",data)
+    // }
 }
 
 export default new DataService();
