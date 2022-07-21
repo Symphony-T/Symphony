@@ -6,8 +6,9 @@
                 <li><NuxtLink to="aboutus">About US</NuxtLink></li>
                 <li><NuxtLink to="signup">Contact us</NuxtLink></li>
                 <li><NuxtLink to="conservatory">Conservatory</NuxtLink></li>
+                <li><NuxtLink to="ecommerce">E-commerce</NuxtLink></li>
                 <div class="search">
-                    <input type="text" name="search" id="search" placeholder="Search this website">
+                    <input type="text" name="search" id="search" placeholder="Search this website"/>
                 </div>
             </ul>
         </nav>
