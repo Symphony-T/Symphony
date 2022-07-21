@@ -16,7 +16,9 @@
           <img :src="`${sheet.img}`" alt="image" class="card" />
           <div class="brand">
             <h3 class="name">{{sheet.name }}</h3>
-            
+             <button class="btn btn-outline-danger" style='margin-right:30px'>Like</button>
+             <router-link to="/videobeginner"><button class="btn btn-success" style='margin-right:30px'>Watch</button></router-link>
+            <button class="btn btn-primary"  v-on:click="download(sheet.pdf)">Download</button>
           </div>
         </div>
       </div>
@@ -40,7 +42,7 @@ export default defineComponent({
   },
 
   created() {
-    DataService.getSheet().then((response) => {
+    DataService.getSheetMas().then((response) => {
       this.sheetsMaster = response.data;
       console.log(response.data);
     });
