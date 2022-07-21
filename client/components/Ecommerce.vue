@@ -1,31 +1,22 @@
-<!-- <template lang="html">
-
+<template >
+<div>
     <h1>Hello from ecommerce</h1>
    
-        <form action="subbmit" style="max-width:500px;margin:auto">
+        <form >
             <h2>Add here your Piano you want to sale </h2>
 
             <label for="img">Image</label><br />
             <input class="input-field" type="text" placeholder="enter your image" v-model="form.img" /><br />
-
-
-
             <label for="img">Brand</label><br />
             <input class="input-field" type="text" placeholder="brand" v-model="form.brand" /><br />
-
-
-
             <label for="img">Price</label><br />
             <input class="input-field" type="number" placeholder="enter your price" v-model="form.price" /><br />
-
-
             <label for="img">Description</label><br />
             <input class="input-field" type="text" placeholder="enter your description"
                 v-model="form.description" /><br />
-
             <button class="btn" v-on:click="savePiano">Add</button>
         </form>
- 
+ </div>
 </template>
 
 <script lang="ts">
@@ -67,4 +58,4 @@ export default defineComponent({
     }
 })
 
-</script> -->
+</script>
