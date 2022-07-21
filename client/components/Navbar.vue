@@ -5,6 +5,7 @@
                 <li><NuxtLink to="level">Levels</NuxtLink></li>
                 <li><NuxtLink to="aboutus">About US</NuxtLink></li>
                 <li><NuxtLink to="signup">Contact us</NuxtLink></li>
+                <li><NuxtLink to="conservatory">Conservatory</NuxtLink></li>
                 <div class="search">
                     <input type="text" name="search" id="search" placeholder="Search this website">
                 </div>
