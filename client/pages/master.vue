@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        <h1>hello master</h1>
         <ul class="level">
         
        <li class="lev"><NuxtLink to="beginner">beginner</NuxtLink></li>
