@@ -1,6 +1,8 @@
 <template>
+<div>
     <div>
-
+<Navbar /> 
+  </div>
         <div class="hold">
             <NuxtLink to="conservatory" class="btn--1">Create One </NuxtLink>
             <div class="container" v-for="conser in c" :key="conser.id">
@@ -22,9 +24,11 @@
 <script>
 import { defineComponent } from "vue";
 import ConsService from "~/service/ConsService";
+import Navbar from "./navbar.vue"
 // import axios from 'axios'
 
 export default defineComponent({
+    components: { Navbar },
     data() {
         return {
             c: []

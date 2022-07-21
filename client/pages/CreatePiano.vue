@@ -1,5 +1,9 @@
 <template >
     <div>
+        <div>
+          <Navbar />
+        </div>
+
         <form>
             <h2>Add here your Piano you want to sale </h2>
             <label for="img">Image</label><br />
@@ -21,8 +25,10 @@ import { defineComponent } from "vue";
 import DataService from "~/service/DataService";
 import ResponseData from '@/interface/ResponseData';
 import Piano from "@/interface/Piano";
+import Navbar from "./navbar.vue";
 
 export default defineComponent({
+    components: { Navbar },
     data() {
         return {
             form: {
@@ -52,7 +58,8 @@ export default defineComponent({
 
                 })
         }
-    }
+    },
+    name: "createPiano"
 })
 
 </script>
