@@ -1,13 +1,13 @@
 import { Document, Schema, model } from "mongoose";
 
-interface IBegi extends Document {
+interface IHome extends Document {
   name: string;
   img: string;
 }
 
 
 //
-const BegiSchema = new Schema<IBegi>({
+const homeSchema = new Schema<IHome >({
   name: {
     type: String,
     required: true,
@@ -18,4 +18,4 @@ const BegiSchema = new Schema<IBegi>({
   }
 
 });
-export const BeginnerModel = model<IBegi>("begi", BegiSchema);
+export const homeModel = model<IHome >("home", homeSchema);

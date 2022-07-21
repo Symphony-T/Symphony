@@ -34,6 +34,10 @@ app.use(intermediateRouter);
 import { expertRouter } from "./Router/expert";
 
 app.use(expertRouter);
+//home
+import { homeRouter } from "./Router/home";
+
+app.use(homeRouter);
 
 
 
