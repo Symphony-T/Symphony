@@ -20,9 +20,11 @@
     <input class="input-field" type="number" v-model="phoneN" placeholder="Phone Number" name="phoneN">
   </div>
 
-  <button v-on:click="saveCons" class="btn">Post new one</button>
+  <button v-on:click="saveCons" class="btn">Post new one 🎹</button><br><br>
+  <NuxtLink to="allcons" class="cancel">Cancel</NuxtLink>
+
 </form>  
-<NuxtLink to="allcons" class="bttn">See all Conservatorys</NuxtLink>
+<NuxtLink to="allcons" class="bttn">See all Conservatorys </NuxtLink>
 </div>
   </template>
 
@@ -103,6 +105,23 @@ h1{
 
 .bttn:hover {
     background-color: orange;
+}
+
+.cancel {
+  background-color: rgb(102, 102, 102);
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  text-decoration: none;
+  margin: auto;
+  float: center;
+}
+
+.cancel:hover {
+  opacity: 1;
 }
 </style>
 

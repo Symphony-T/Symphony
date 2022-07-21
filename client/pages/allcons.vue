@@ -2,15 +2,17 @@
     <div>
 
         <div class="hold">
-            <NuxtLink to="conservatory" class="btn--1">Create One</NuxtLink>
+            <NuxtLink to="conservatory" class="btn--1">Create One </NuxtLink>
             <div class="container" v-for="conser in c" :key="conser.id">
                 <div class="CContainer">
                         <h4>{{conser.name}}</h4>
                         <p>{{conser.description}}</p>
                         <img :src="`${conser.img}`" alt="conservatory image">
-                        <h5>{{conser.localisation}}</h5>
-                        <h5>{{conser.price}}</h5>
-                        <h5>{{conser.phoneN}}</h5>
+                        <h5>📍{{conser.localisation}}</h5>
+                        <h5>{{conser.price}}$</h5>
+                        <h5>📞{{conser.phoneN}}</h5>
+                          <button v-on:click="" class="delete">Delete</button>
+                          <button v-on:click="" class="update">Update</button>
                     </div>
             </div>
         </div>

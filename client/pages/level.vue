@@ -2,11 +2,9 @@
 <div> 
  <div class="nav">
       <ul class="level">
-    
        <li class="lev"><NuxtLink to="beginner">beginner</NuxtLink></li>
        <li class="lev"><NuxtLink to="intermediate">intermediate</NuxtLink></li>
        <li class="lev"><NuxtLink to="master">master</NuxtLink></li>
-    
       </ul>
     </div>
 </div>
