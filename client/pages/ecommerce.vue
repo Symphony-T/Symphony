@@ -1,10 +1,7 @@
-<!-- <template >
-<div>
-    <h1>Hello from ecommerce</h1>
-   
-        <form >
+<template >
+    <div>
+        <form>
             <h2>Add here your Piano you want to sale </h2>
-
             <label for="img">Image</label><br />
             <input class="input-field" type="text" placeholder="enter your image" v-model="form.img" /><br />
             <label for="img">Brand</label><br />
@@ -16,7 +13,7 @@
                 v-model="form.description" /><br />
             <button class="btn" v-on:click="savePiano">Add</button>
         </form>
- </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -58,4 +55,4 @@ export default defineComponent({
     }
 })
 
-</script> -->
+</script>
