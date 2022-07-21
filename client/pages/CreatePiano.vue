@@ -52,7 +52,8 @@ export default defineComponent({
 
                 })
         }
-    }
+    },
+    name: "createPiano"
 })
 
 </script>

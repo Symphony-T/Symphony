@@ -35,6 +35,7 @@ export default defineComponent({
                 this.pianos = response.data
                 console.log(response.data);
             })
-    }
+    },
+    name: "ecommerce"
 })
 </script>
