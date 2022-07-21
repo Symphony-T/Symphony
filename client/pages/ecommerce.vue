@@ -14,7 +14,8 @@
                 </div>
             </div>
         </div>
-    </div>
+      </div>
+   
 </template>
 
 <script>
@@ -23,11 +24,11 @@ import DataService from "~/service/DataService";
 
 
 export default defineComponent({
-    data() {
-        return {
-            pianos: []
-        }
-    },
+  data() {
+    return {
+      pianos: [],
+    };
+  },
 
     created() {
         DataService.getPiano()
