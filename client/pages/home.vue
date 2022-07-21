@@ -4,7 +4,7 @@
       <div>
   <Navbar />
 </div>
-        <h1>hello home</h1>
+        <h1>hello home!</h1>
          <ul class="level">
         <div class="link">
        
