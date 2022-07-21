@@ -1,6 +1,14 @@
 <template>
 <div> 
-    <h1>Levels</h1>
+ <div class="nav">
+      <ul>
+    
+       <li><NuxtLink to="beginner">beginner</NuxtLink></li>
+       <li><NuxtLink to="intermediate">intermediate</NuxtLink></li>
+       <li><NuxtLink to="master">master</NuxtLink></li>
+    
+      </ul>
+    </div>
 </div>
 </template>
 
@@ -9,3 +17,7 @@ export default {
     name:"level"
 }
 </script>
+
+<style scoped>
+ 
+</style>
