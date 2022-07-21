@@ -21,6 +21,18 @@ class DataService {
     async getSheet(data:any): Promise<any>{
         return await http.get("/beginner",data)
     }
+    // addSheet(data:any): Promise<any>{
+    //     return http.post("/intermediate",data)
+    // }
+    // async getSheet(data:any): Promise<any>{
+    //     return await http.get("/intermediate",data)
+    // }
+   async updatePassword(data:any):Promise<any>{
+    return await http.put("/newpassword",data)
+}
+async forgetPassword(data:any):Promise<any>{
+    return await http.post("/forgetpassword",data)
+}
     addSheets(data:any): Promise<any>{
         return http.post("/intermediate",data)
     }
@@ -41,5 +53,4 @@ class DataService {
     }
     
 }
-
 export default new DataService();

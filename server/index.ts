@@ -39,6 +39,8 @@ import { homeRouter } from "./Router/home";
 
 app.use(homeRouter);
 
+ import {forgetPasswordRouter} from "./nodeMailer"
+ app.use(forgetPasswordRouter)
 
 
 
