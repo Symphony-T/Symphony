@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h1>hello beg</h1>
+        
+        <h1>hello beginner</h1>
        <li><NuxtLink to="intermediate">intermediate</NuxtLink></li>
        <li><NuxtLink to="master">master</NuxtLink></li>
        
@@ -8,7 +9,7 @@
        
        
        
-       
+     
      
     
 </template>
