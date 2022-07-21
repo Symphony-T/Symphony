@@ -12,7 +12,9 @@
           <img :src="`${sheet.img}`" alt="image" class="card" />
           <div class="brand">
             <h3 class="name">{{sheet.name }}</h3>
-            
+             <button  >Like</button>
+             <router-link to="/videobeginner"><button>Watch</button></router-link>
+            <button  v-on:click="download(sheet.pdf)">Download</button>
           </div>
         </div>
       </div>
@@ -27,6 +29,7 @@
 <script>
 import { defineComponent } from "vue";
 import DataService from "~/service/DataService";
+
 // import axios from 'axios'
 
 export default defineComponent({
@@ -43,6 +46,7 @@ export default defineComponent({
     });
   },
 });
+  
 </script>
 <style>
 
