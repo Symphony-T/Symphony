@@ -13,7 +13,7 @@
       <a
         href="#"
         v-on:click="login({ email, password })"
-        class="button--green">Login</a>
+        class="button--green"><NuxtLink to="signup">Login</NuxtLink></a>
     </div>
   </div>
 </template>
@@ -25,15 +25,16 @@ import { mapActions } from 'vuex';
 
 export default {
     data() {
-    return {
-      email: '',
-      password: '',
-    };
-  },
+        return {
+            email: "",
+            password: "",
+        };
+    },
     methods: {
-    ...mapActions(['login']),
-  },
-    layout: 'login'
+        ...mapActions(["login"]),
+    },
+    layout: "login",
+    components: { Navbar }
 }
 </script>
 

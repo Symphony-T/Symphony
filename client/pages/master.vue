@@ -1,5 +1,9 @@
 <template>
     <div >
+      <div>
+                <Navbar />
+      </div>
+
      <h1>hello master</h1>
         <ul class="level">
         <div class="link">
@@ -24,9 +28,11 @@
 <script>
 import { defineComponent } from "vue";
 import DataService from "~/service/DataService";
+import Navbar from './navbar.vue';
 // import axios from 'axios'
 
 export default defineComponent({
+  components: { Navbar },
   data() {
     return {
       sheetsMaster: [],
