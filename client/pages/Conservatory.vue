@@ -22,7 +22,7 @@
 
   <button v-on:click="saveCons" class="btn">Post new one</button>
 </form>  
-<NuxtLink to="allcons" class="button">See all Conservatorys</NuxtLink>
+<NuxtLink to="allcons" class="bttn">See all Conservatorys</NuxtLink>
 </div>
   </template>
 
@@ -72,34 +72,38 @@ export default defineComponent ({
 
 </script>
 <style>
-h1{
-    text-align: center;
-}
 h2{
   text-align: center;
+  color: rgb(21, 111, 185);
 }
-.button{
+h1{
+  text-align: center;
+  float: center;
+}
+ .bttn{
+    position: relative;
+    margin:auto;
+    width: 600px;
+    height: 45px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(6, 1, 6);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+   text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
 
-                display: inline-block;
-                outline: 0;
-                cursor: pointer;
-                border: 2px solid #000;
-                border-radius: 3px;
-                color: #000;
-                background: #fff;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 28px;
-                padding: 12px 20px;
-                text-align:center;
-                transition-duration: .15s;
-                transition-property: all;
-                transition-timing-function: cubic-bezier(.4,0,.2,1);   
-                text-decoration: none;      
+.bttn:hover {
+    background-color: orange;
 }
- .button:hover{
-                    background: rgb(251, 193, 245);
-                }
 </style>
 
 
