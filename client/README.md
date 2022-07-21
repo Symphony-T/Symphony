@@ -67,3 +67,33 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+
+
+
+
+
+
+
+
+
+
+<!-- <template>
+    <div>
+        <div class="hold">
+            <NuxtLink to="conservatory">Create One</NuxtLink>
+            <div class="container" v-for="conser in c" :key="conser.id">
+                <div class="x">
+                    <div class="brand">
+                        <h2>{{conser.name}}</h2>
+                        <p>{{conser.description}}</p>
+                        <img :src="`${conser.img}`" alt="conservatory img">
+                        <h6>{{conser.localisation}}</h6>
+                        <p>{{conser.price}}</p>
+                        <p>{{conser.phoneN}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template> -->
