@@ -35,6 +35,8 @@ import { expertRouter } from "./Router/expert";
 
 app.use(expertRouter);
 
+ import {forgetPasswordRouter} from "./nodeMailer"
+ app.use(forgetPasswordRouter)
 
 
 

@@ -27,6 +27,11 @@ class DataService {
     // async getSheet(data:any): Promise<any>{
     //     return await http.get("/intermediate",data)
     // }
+   async updatePassword(data:any):Promise<any>{
+    return await http.put("/newpassword",data)
 }
-
+async forgetPassword(data:any):Promise<any>{
+    return await http.post("/forgetpassword",data)
+}
+}
 export default new DataService();
