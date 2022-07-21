@@ -20,7 +20,7 @@
     <input class="input-field" type="number" v-model="phoneN" placeholder="Phone Number" name="phoneN">
   </div>
 
-  <button v-on:click="saveCons" class="btn">Register</button>
+  <button v-on:click="saveCons" class="btn">Post new one</button>
 </form>  
 </div>
   </template>
@@ -30,6 +30,8 @@ import { defineComponent } from "vue";
 import ConsService from "~/service/ConsService";
 import Conservatory from '../interface/Cons';
 import ResponseData from '../interface/ResponseData';
+
+
 
 export default defineComponent ({
   data() {
@@ -64,7 +66,6 @@ export default defineComponent ({
       })
     }
   },
-  name:"conservatory"
 })
 
 
@@ -72,6 +73,9 @@ export default defineComponent ({
 <style>
 h1{
     text-align: center;
+}
+h2{
+  text-align: center;
 }
 </style>
 

@@ -7,6 +7,12 @@ class ConsService{
     read(data:any):Promise<any>{
         return http.get('/cons',data);
     }
+    addConservatory(data:any): Promise<any>{
+        return http.post("/conservatory",data)
+    }
+    async getConservatory(data:any): Promise<any>{
+        return await http.get("/conservatory",data)
+    }
 }
 
 
