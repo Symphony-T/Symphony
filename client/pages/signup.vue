@@ -29,7 +29,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import DataService from "~/service/DataService";
+import DataService from "../service/DataService";
 import User from '../interface/User';
 import ResponseData from '../interface/ResponseData';
 
