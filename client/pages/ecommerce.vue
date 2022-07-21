@@ -1,5 +1,9 @@
 <template>
     <div>
+        <div>
+             <Navbar />
+        </div>
+         
 
         <div class="hold">
             <div>
@@ -21,22 +25,26 @@
 <script>
 import { defineComponent } from "vue";
 import DataService from "~/service/DataService";
+import Navbar from "./navbar.vue";
+
 
 
 export default defineComponent({
-  data() {
-    return {
-      pianos: [],
-    };
-  },
-
+        components: { Navbar },
+    data() {
+        return {
+            pianos: [],
+        };
+    },
     created() {
         DataService.getPiano()
             .then(response => {
-                this.pianos = response.data
-                console.log(response.data);
-            })
-    }
+            this.pianos = response.data;
+            console.log(response.data);
+        });
+    },
+    name: "ecommerce",
+    components: { Navbar }
 })
 </script>
 

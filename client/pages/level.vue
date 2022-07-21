@@ -1,5 +1,8 @@
 <template>
 <div> 
+  <div>
+<Navbar /> 
+  </div>
  <div class="nav">
       <ul class="level">
     
@@ -13,8 +16,10 @@
 </template>
 
 <script>
+import Navbar from './navbar.vue';
 export default {
-    name:"level"
+  components: { Navbar },
+    name: "level"
 }
 </script>
 
