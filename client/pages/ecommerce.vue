@@ -11,6 +11,8 @@
                     <h3 class="name">{{ piano.brand }}</h3>
                     <h3 class="price">{{ piano.price }} $</h3>
                     <p class="description">{{ piano.description }}</p>
+                    <button class="delete" v-on:click="deleted">Delete</button>
+                    <button class="update">Update</button>
                 </div>
             </div>
         </div>
@@ -22,19 +24,53 @@ import { defineComponent } from "vue";
 import DataService from "~/service/DataService";
 
 
+
+
 export default defineComponent({
     data() {
         return {
             pianos: []
         }
     },
+    methods: {
+        created() {
+            DataService.getPiano()
+                .then(response => {
+                    this.pianos = response.data
+                    console.log(response.data);
+                })
 
-    created() {
-        DataService.getPiano()
-            .then(response => {
-                this.pianos = response.data
-                console.log(response.data);
-            })
+        },
+
+
+        deleted() {
+           
+            if (confirm("Confirm your delete")) {
+                
+                DataService.deletePiano()
+                    .then(response => {
+                        console.log(response);
+                       
+                    })
+                    .catch(e => {
+                        console.log(e);
+                    })
+            }
+            //    axios.delete(`http://localhost:2000/piano/${id}`)
+            //         .then((response) => {
+            //           console.log(response);
+            //            this.created()
+            // this.created()
+            // this.pianos.splice(index,1)
+            // console.log(response)
+            //     // return this.pianos
+            // });
+        },
+
+    },
+    mounted() {
+        this.created()
+
     }
 })
 </script>
@@ -42,7 +78,7 @@ export default defineComponent({
 <style>
 .btn-1 {
     position: relative;
-     margin-left: 550px;
+    margin-left: 550px;
     width: 600px;
     height: 45px;
     font-size: 18px;
@@ -57,8 +93,8 @@ export default defineComponent({
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-   
-   
+
+
     font-family: 'Times New Roman', Times, serif;
 }
 
