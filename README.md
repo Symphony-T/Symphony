@@ -1,4 +1,4 @@
-## Symphony:
+## Symphony ##
 
 Welcome to Our Application
 
