@@ -69,9 +69,9 @@ const cryptr = new Cryptr('ReallySecretKey');
       console.log(err)
     }
     if(isPasswordValid){
-      res.status(200).send(user)
+      res.status(200).send(user.username)
     }else {
-      res.status(201).send("Password invalid")
+      res.status(201).send(false)
     }
   })
 })
