@@ -16,10 +16,12 @@ router.get("/expert",async(req: Request, res: Response) => {
   router.post("/expert", async (req: Request, res: Response) => {
     const name = req.body.name;
     const img = req.body.img;
+    const  pdf= req.body.img;
     const newinter = new ExpertModel({
       _id: new mongoose.Types.ObjectId(),
       name: name,
       img: img,
+      pdf : pdf,
     });
   
     newinter.save().then((result) => {

@@ -4,8 +4,14 @@ class ConsService{
     create(data:any):Promise<any>{
         return http.post('/cons',data);
     }
-    read(data:any):Promise<any>{
-        return http.get('/cons',data);
+    addConservatory(data:any): Promise<any>{
+        return http.post("/cons",data)
+    }
+    async getConservatory(data:any): Promise<any>{
+        return await http.get("/cons",data)
+    }
+    deleteCons(id:string):Promise<any>{
+        return http.delete("/cons")
     }
 }
 

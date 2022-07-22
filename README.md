@@ -1,11 +1,11 @@
-## Symphony:
+## Symphony ##
 
 Welcome to Our Application
 
 ## Team:
-- Scrum Master: Omar Zouaoui
+- Scrum Master: OMAR ZOUAOUI
 
-- Development Team Members: Oussama Farjaoui,Azyz Hssin , Fawez Ferjaoui
+- Development Team Members: Oussama Farjaoui , Azyz Hssin , Fawez Ferjaoui
 
 ## Table of Contents:
 
@@ -22,8 +22,9 @@ Welcome to Our Application
 
 - Node.js
 - Vue.js
+- Nuxt 
 - TypeScript
-- PostgreSQL
+- MongoDB
 - etc..
 
 ## Installing Dependencies:
@@ -34,4 +35,6 @@ Welcome to Our Application
 + cd Client
 + npm run dev
 # Server :
++ cd server
++ npm run start
 

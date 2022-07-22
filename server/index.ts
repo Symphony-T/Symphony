@@ -8,7 +8,7 @@ import cors from "cors";
 const app = express()
 app.use(cors());
 app.use(json());
-const Port= 2000 
+const Port= 2000
 
 
 //user
@@ -34,6 +34,13 @@ app.use(intermediateRouter);
 import { expertRouter } from "./Router/expert";
 
 app.use(expertRouter);
+//home
+import { homeRouter } from "./Router/home";
+
+app.use(homeRouter);
+
+ import {forgetPasswordRouter} from "./nodeMailer"
+ app.use(forgetPasswordRouter)
 
 
 
@@ -41,9 +48,6 @@ app.use(expertRouter);
 
 
 
-app.get("/", (req, res) => {
-    res.send("te5dem");
-  });
 mongoose.connect("mongodb://localhost:27017/symphony-p", () => {
   console.log("Connected to database...");
 });
