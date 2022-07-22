@@ -5,8 +5,8 @@ class DataService {
         return http.post("/signup", data);
     }
     async access(credentials: any): Promise<any> {
-        return await http.post("/login", credentials).then((res)=>{
-            res.data
+        return await http.post("/login", credentials).then((res:any)=>{
+            console.log(res.data)
         })
     }
     addPiano(data:any): Promise<any>{
