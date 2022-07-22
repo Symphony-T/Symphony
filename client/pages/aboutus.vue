@@ -27,3 +27,4 @@ export default {
   #heading {
     font-weight: 400;
   }
+  </style>
