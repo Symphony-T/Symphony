@@ -18,9 +18,9 @@
           <img :src="`${sheete.img}`" alt="image" class="card" />
           <div class="brand">
             <h3 class="name">{{sheete.name }}</h3>
-             <button class="btn btn-outline-danger" style='margin-right:30px'>Like</button>
-             <router-link to="/videobeginner"><button class="btn btn-success" style='margin-right:30px'>Watch</button></router-link>
-            <button class="btn btn-primary"  v-on:click="download(sheet.pdf)">Download</button>
+           <button class="button" >Like</button>
+             <button class="button">Watch</button>
+            <button class="button" v-on:click="download(sheet.pdf)">Download</button>
           </div>
         </div>
       </div>

@@ -16,9 +16,9 @@
           <img :src="`${sheet.img}`" alt="image" class="card" />
           <div class="brand">
             <h3 class="name">{{sheet.name }}</h3>
-             <button class="btn btn-outline-danger" style='margin-right:30px'>Like</button>
-             <router-link to="/videobeginner"><button class="btn btn-success" style='margin-right:30px'>Watch</button></router-link>
-            <button class="btn btn-primary"  v-on:click="download(sheet.pdf)">Download</button>
+             <button class="button" >Like</button>
+             <button class="button">Watch</button>
+            <button class="button" v-on:click="download(sheet.pdf)">Download</button>
           </div>
         </div>
       </div>
@@ -47,6 +47,16 @@ export default defineComponent({
       console.log(response.data);
     });
   },
+   methods: {
+    download() {
+      const link = document.createElement('a')
+      link.href = '/https://res.cloudinary.com/dafqx8f7o/image/upload/v1657896575/Coldplay-The_Scientist-Sheetzbox_sc4l1b.pdf'
+      link.download = "https://res.cloudinary.com/dafqx8f7o/image/upload/v1657896575/Coldplay-The_Scientist-Sheetzbox_sc4l1b.pdf"
+      link.target = ''
+      link.click()
+    },
+  },
+ 
 });
 </script>
 
