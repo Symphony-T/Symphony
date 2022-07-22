@@ -7,7 +7,7 @@
             <div id="cons" v-for="conser in c" :key="conser.id">
                 <div id= "cadre">
                     <h4>{{conser.name}}</h4>
-                    <img :src="`${conser.img}`" alt="conservatory image" id="image">
+                    <img :src="`${conser.img}`" alt="conservatory image" id="image"/>
                         <h5>{{conser.description}}</h5>
                         <h5>📍Localisation: {{conser.localisation}}</h5>
                         <h5 id="phone">price :{{conser.price}}DT</h5>
