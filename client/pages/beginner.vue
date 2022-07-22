@@ -16,9 +16,9 @@
           <img :src="`${sheet.img}`" alt="image" class="card" />
           <div class="brand">
             <h3 class="name">{{sheet.name }}</h3>
-             <button  >Like</button>
-             <router-link to="/videobeginner"><button>Watch</button></router-link>
-            <button  v-on:click="download(sheet.pdf)">Download</button>
+             <button class="button" >like</button>
+             <button class="button">Watch</button>
+            <button class="button" v-on:click="download(sheet.pdf)">Download</button>
           </div>
         </div>
       </div>
@@ -126,6 +126,35 @@ export default defineComponent({
   position: relative;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   cursor: pointer;
+}
+
+.button {
+  position: relative;
+  width: 90px;
+  height: 45px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: white;
+  background-color: rgb(6, 1, 6);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-left: 20px;
+  font-family: sans-serif;
+}
+
+.button:hover {
+  position: relative;
+
+  background-color: #361d2a;
+  box-shadow: 0px 15px 20px #D3B1C2;
+  color: white;
+  transform: translateY(-7px);
 }
 
 
