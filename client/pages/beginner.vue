@@ -16,7 +16,7 @@
           <img :src="`${sheet.img}`" alt="image" class="card" />
           <div class="brand">
             <h3 class="name">{{sheet.name }}</h3>
-             <button class="button" >Like</button>
+             <button class="button" >like</button>
              <button class="button">Watch</button>
             <button class="button" v-on:click="download(sheet.pdf)">Download</button>
           </div>

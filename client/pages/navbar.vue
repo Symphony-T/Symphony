@@ -7,6 +7,7 @@
                 <button class="button-n"><li><NuxtLink to="signup">Contact us</NuxtLink></li></button>
                 <button class="button-n"><li><NuxtLink to="allcons">Conservatory</NuxtLink></li></button>
                 <button class="button-n"><li><NuxtLink to="ecommerce">E-commerce</NuxtLink></li></button>
+               
                 <div class="search">
                     <input type="text" name="search" id="search" placeholder="Search this website"/>
                 </div>
