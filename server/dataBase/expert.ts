@@ -3,7 +3,6 @@ import { Document, Schema, model } from "mongoose";
 interface IExpert extends Document {
   name: string;
   img: string;
-  VideoUrl:string;
   pdf :string;
 }
 
@@ -18,11 +17,6 @@ const ExpertSchema = new Schema<IExpert>({
     type: String,
     required: true,
   },
-  VideoUrl: {
-    type: String,
-    required: true,
-  },
-
   pdf: {
     type: String,
     required: true,
