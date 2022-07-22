@@ -10,7 +10,7 @@
                     <img :src="`${conser.img}`" alt="conservatory image" id="image">
                         <h5>{{conser.description}}</h5>
                         <h5>📍Localisation: {{conser.localisation}}</h5>
-                        <h5 id="phone">price :{{conser.price}}$</h5>
+                        <h5 id="phone">price :{{conser.price}}DT</h5>
                         <h5>📞{{conser.phoneN}}</h5>
                           <!-- <button v-on:click="" class="delete">Delete</button>
                           <button v-on:click="" class="update">Update</button>
