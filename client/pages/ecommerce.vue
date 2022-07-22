@@ -1,25 +1,29 @@
 <template>
     <div>
         <div>
-             <Navbar />
+            <Navbar />
         </div>
-         
+
 
         <div class="hold">
             <div>
                 <NuxtLink to="createPiano"><button class="btn-1">Add Piano to Sale</button></NuxtLink>
             </div><br /><br /><br />
-            <div class="container" v-for="piano in pianos" :key="piano.id">
+            <div class="container-box" v-for="piano in pianos" :key="piano.id">
                 <div class="pianoContainer">
                     <img :src="`${piano.img}`" alt="image" />
-                    <h3 class="name">{{ piano.brand }}</h3>
-                    <h3 class="price">{{ piano.price }} $</h3>
-                    <p class="description">{{ piano.description }}</p>
+                    <h3 class="name"><span>Brand:</span> {{ piano.brand }}</h3>
+                    <h3 class="price"><span>Price:</span> {{ piano.price }} $</h3>
+                    <h3 class="phone"><span>Phone:</span> {{ piano.phone }}</h3>
+                    <p class="description"><span>Description:</span> {{ piano.description }}</p>
+                    <button class="delete" v-on:click="deleted">Delete</button>
+                    <NuxtLink to="updatePiano"><button class="update">Update</button></NuxtLink>
+                   
                 </div>
             </div>
         </div>
-      </div>
-   
+    </div>
+
 </template>
 
 <script>
@@ -29,29 +33,66 @@ import Navbar from "./navbar.vue";
 
 
 
+
+
 export default defineComponent({
-        components: { Navbar },
+    name: "ecommerce",
+    components: { Navbar },
+
     data() {
         return {
             pianos: [],
         };
     },
-    created() {
-        DataService.getPiano()
-            .then(response => {
-            this.pianos = response.data;
-            console.log(response.data);
-        });
+    methods: {
+        created() {
+            DataService.getPiano()
+                .then(response => {
+                    this.pianos = response.data
+                    console.log(response.data);
+                })
+                .catch(err=>{
+                    console.log(err)
+                })
+
+        },
+        deleted(index) {
+
+            if (confirm("Confirm your delete")) {
+
+                DataService.deletePiano()
+                    .then(response => {
+                        console.log(response);
+                        this.pianos.splice(index, 1)
+                        return this.pianos
+                    })
+                    .catch(e => {
+                        console.log(e);
+                    })
+            }
+            //    axios.delete(`http://localhost:2000/piano/${id}`)
+            //         .then((response) => {
+            //           console.log(response);
+            // this.created()
+            // this.pianos.splice(index,1)
+            // console.log(response)
+            //     // return this.pianos
+            // });
+        },
     },
-    name: "ecommerce",
-    components: { Navbar }
+    mounted() {
+        this.created()
+
+    }
+    
+
 })
 </script>
 
 <style>
 .btn-1 {
     position: relative;
-     margin-left: 550px;
+    margin-left: 550px;
     width: 600px;
     height: 45px;
     font-size: 18px;
@@ -66,8 +107,6 @@ export default defineComponent({
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-   
-   
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -90,8 +129,9 @@ img {
     width: 400px;
     margin-top: 0;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     border-radius: 80px;
+
 }
 
 .pianoContainer h3 {
@@ -99,10 +139,34 @@ img {
     margin-top: 0;
     text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-family: Lucida Sans;
+    font-size: 25px;
+}
+
+.pianoContainer h3 span {
+    position: relative;
+    margin-top: 0;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
 }
 
-.container {
+.pianoContainer p {
+    position: relative;
+    margin-top: 0;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: Lucida Sans;
+    font-size: 15px;
+}
+
+.pianoContainer p span {
+    position: relative;
+    margin-top: 0;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.container-box {
     position: relative;
     float: left;
     margin-right: 50px;
@@ -111,9 +175,10 @@ img {
     margin-bottom: 30px;
     border-radius: 80px;
 
+
 }
 
-.container:hover {
+.container-box:hover {
     position: relative;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     cursor: pointer;
