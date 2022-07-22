@@ -8,23 +8,23 @@
   <form  style="max-width:500px;margin:auto">
   <h2>Create a new one</h2>
   <div class="input-container">
-    <input class="i" type="text" v-model="name" placeholder="Name" name="name">
+    <input class="i" type="text" v-model="name" placeholder="Name" name="name"/>
   </div>
-    <input class="i" type="text" v-model="description" placeholder="Description" name="description">  
+    <input class="i" type="text" v-model="description" placeholder="Description" name="description"/>  
   <div class="input-container">
-   <input class="i" type="text" v-model="img" placeholder="Img" name="img" id="xxx">
-  </div>
-  <div class="input-container">
-    <input class="i" type="text" v-model="localisation" placeholder="Localisation" name="localisation">
+   <input class="i" type="text" v-model="img" placeholder="Img" name="img" id="xxx"/>
   </div>
   <div class="input-container">
-    <input class="i" type="number" v-model="price" placeholder="Price" name="price">
+    <input class="i" type="text" v-model="localisation" placeholder="Localisation" name="localisation"/>
   </div>
   <div class="input-container">
-    <input class="i" type="number" v-model="phoneN" placeholder="Phone Number" name="phoneN">
+    <input class="i" type="number" v-model="price" placeholder="Price" name="price"/>
+  </div>
+  <div class="input-container">
+    <input class="i" type="number" v-model="phoneN" placeholder="Phone Number" name="phoneN"/>
   </div>
 
-  <NuxtLink to="allcons"  v-on:click="saveCons" id="b">Post new one 🎹</NuxtLink><br><br>
+  <NuxtLink to="allcons"  v-on:click="saveCons" id="b">Post new one 🎹</NuxtLink><br /><br />
   <NuxtLink to="allcons" class="cancel">Cancel</NuxtLink>
 
 </form>  
