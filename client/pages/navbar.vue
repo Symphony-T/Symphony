@@ -4,7 +4,6 @@
                 <button class="button-n"><li><NuxtLink to="home">Home</NuxtLink></li></button>
                 <button class="button-n"><li><NuxtLink to="level">Levels</NuxtLink></li></button>
                 <button class="button-n"><li><NuxtLink to="aboutus">About US</NuxtLink></li></button>
-                <button class="button-n"><li><NuxtLink to="signup">Contact us</NuxtLink></li></button>
                 <button class="button-n"><li><NuxtLink to="allcons">Conservatory</NuxtLink></li></button>
                 <button class="button-n"><li><NuxtLink to="ecommerce">E-commerce</NuxtLink></li></button>
                
