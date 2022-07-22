@@ -16,5 +16,6 @@ const BegiSchema = new Schema<IBegi>({
     type: String,
     required: true,
   }
+
 });
 export const BeginnerModel = model<IBegi>("begi", BegiSchema);

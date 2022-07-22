@@ -15,9 +15,48 @@ class DataService {
     async getPiano(data: any): Promise<any> {
         return await http.get("/piano", data)
     }
-    deletePiano(id: any ,data:any): Promise<any> {
-        return http.delete(`/piano/${id}`,data)
+    deletePiano(id: any, data: any): Promise<any> {
+        return http.delete(`/piano/${id}`, data)
     }
-}
+    updatePianoData(data: any): Promise<any> {
+        return http.put("/piano",data)
+    }
+    addSheet(data: any): Promise<any> {
+        return http.post("/beginner", data)
+    }
+    async getSheet(data: any): Promise<any> {
+        return await http.get("/beginner", data)
+    }
+    // addSheet(data:any): Promise<any>{
+    //     return http.post("/intermediate",data)
+    // }
+    // async getSheet(data:any): Promise<any>{
+    //     return await http.get("/intermediate",data)
+    // }
+    async updatePassword(data: any): Promise<any> {
+        return await http.put("/newpassword", data)
+    }
+    async forgetPassword(data: any): Promise<any> {
+        return await http.post("/forgetpassword", data)
+    }
+    addSheets(data: any): Promise<any> {
+        return http.post("/intermediate", data)
+    }
+    async getSheets(data: any): Promise<any> {
+        return await http.get("/intermediate", data)
+    }
+    addSheetMas(data: any): Promise<any> {
+        return http.post("/expert", data)
+    }
+    async getSheetMas(data: any): Promise<any> {
+        return await http.get("/expert", data)
+    }
+    addSheeth(data: any): Promise<any> {
+        return http.post("/home", data)
+    }
+    async getSheeth(data: any): Promise<any> {
+        return await http.get("/home", data)
+    }
 
+}
 export default new DataService();
