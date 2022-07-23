@@ -5,28 +5,24 @@
          </div>
          <form action="#">
             <div class="field">
-               <input type="text" required>
+               <input type="text" required/>
                <label>Email Address</label>
             </div>
             <div class="field">
-               <input type="password" required>
+               <input type="password" required/>
                <label>Password</label>
             </div>
             <div class="content">
                <div class="checkbox">
-                  <input type="checkbox" id="remember-me">
+                  <input type="checkbox" id="remember-me"/>
                   <label for="remember-me">Remember me</label>
                </div>
-               <!-- <label class="switch">
-    <input type="checkbox">
-    <span class="slider"></span>
-</label> -->
                <div class="pass-link">
-                  <a href="#">Forgot password?</a>
+                  <NuxtLink to="newPassword">Forgot password?</NuxtLink>
                </div>
             </div>
             <div class="field">
-               <input type="submit" v-on:click="login" value="Login">
+               <NuxtLink to="home"><input type="submit" v-on:click="login" value="Login"/></NuxtLink>
             </div>
             <div class="signup-link">
                Not a member? <NuxtLink to="signup">Signup now</NuxtLink>
