@@ -6,15 +6,15 @@
          </div>
          <form action="#">
             <div class="field">
-               <input type="email" required v-model="email">
+               <input type="email" required v-model="email"/>
                <label>Email Address</label>
             </div>
             <div class="field">
-               <input type="text" required v-model="username">
+               <input type="text" required v-model="username"/>
                <label>username</label>
             </div>
             <div class="field">
-               <input type="password" required v-model="password">
+               <input type="password" required v-model="password"/>
                <label>Password</label>
             </div>
             <div class="content">

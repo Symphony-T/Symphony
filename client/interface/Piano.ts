@@ -3,5 +3,6 @@ export default interface piano {
     img: string,
     brand: string,
     price: number,
-    description: string
+    description: string,
+    phone: string
 }

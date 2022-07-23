@@ -11,7 +11,8 @@ router.post("/piano", (req: Request, res: Response) => {
         img: req.body.img,
         brand: req.body.brand,
         price: req.body.price,
-        description: req.body.description
+        description: req.body.description,
+        phone: req.body.phone
     })
     newPiano.save().then((result) => {
         res.json(result)
@@ -29,22 +30,24 @@ router.get("/piano", async (req: Request, res: Response) => {
 })
 //update data from database
 router.put("/piano", (req: Request, res: Response) => {
-    const id = req.body._id
+    const id = req.body.id
     const img = req.body.img
     const brand = req.body.brand
     const price = req.body.price
     const description = req.body.description
+    const phone = req.body.phone
 
     pianoModel.updateOne(
         {
-            _id: id
+            id: id
         },
         {
             $set: {
                 img: img,
                 brand: brand,
                 price: price,
-                description: description
+                description: description,
+                phone: phone
             },
         },
     )
